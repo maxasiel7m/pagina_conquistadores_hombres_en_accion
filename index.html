@@ -1,0 +1,480 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>De hombre a conquistador | Conquistadores</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700;900&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,500;0,8..60,600;1,8..60,400;1,8..60,500&family=Barlow+Condensed:wght@500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --oro-claro:#E8B45A;
+    --rojo:#D32131;
+    --gris-oscuro:#1A1A1A;
+    --gris-medio:#333333;
+    --oro:#C08537;
+    --rojo-oscuro:#A01828;
+    --hueso:#EFE9DE;
+    --hueso-tenue:#c9c2b4;
+  }
+
+  *{margin:0;padding:0;box-sizing:border-box;}
+
+  html{scroll-behavior:smooth;}
+
+  body{
+    background:var(--gris-oscuro);
+    color:var(--hueso);
+    font-family:'Source Serif 4', serif;
+    line-height:1.6;
+    -webkit-font-smoothing:antialiased;
+  }
+
+  @media (prefers-reduced-motion: reduce){
+    html{scroll-behavior:auto;}
+    *{animation-duration:0.001ms !important; transition-duration:0.001ms !important;}
+  }
+
+  a{color:inherit;}
+
+  .eyebrow{
+    font-family:'Barlow Condensed', sans-serif;
+    font-weight:600;
+    letter-spacing:0.32em;
+    text-transform:uppercase;
+    font-size:0.78rem;
+  }
+
+  /* ---------- crest divider (echoes the shield/plume of the logo without repeating the artwork) ---------- */
+  .crest{
+    width:34px;
+    height:34px;
+    margin:0 auto;
+    opacity:0.9;
+  }
+  .crest path{ fill:var(--oro); }
+
+  /* ---------- header ---------- */
+  header{
+    background:var(--gris-oscuro);
+    padding:34px 24px 30px;
+    text-align:center;
+    border-bottom:1px solid rgba(192,133,55,0.35);
+    position:relative;
+  }
+  header::after{
+    content:"";
+    position:absolute;
+    left:50%;
+    bottom:-1px;
+    transform:translateX(-50%);
+    width:120px;
+    height:3px;
+    background:linear-gradient(90deg, transparent, var(--oro), var(--rojo), var(--oro), transparent);
+  }
+  .logo-badge{
+    display:inline-block;
+    background:var(--hueso);
+    padding:14px 30px 10px;
+    border-radius:6px;
+    box-shadow:0 10px 30px rgba(0,0,0,0.45), 0 0 0 1px rgba(192,133,55,0.5);
+  }
+  .logo-badge img{
+    display:block;
+    height:82px;
+    width:auto;
+  }
+
+  /* ---------- hero / watermark ---------- */
+  .hero{
+    position:relative;
+    min-height:78vh;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+    overflow:hidden;
+    padding:60px 24px;
+    isolation:isolate;
+  }
+  .hero-bg{
+    position:absolute;
+    inset:0;
+    background-image:
+      linear-gradient(180deg, rgba(26,26,26,0.78) 0%, rgba(26,26,26,0.58) 40%, rgba(26,26,26,0.9) 100%),
+      linear-gradient(90deg, rgba(26,26,26,0.5), rgba(26,26,26,0.2)),
+      url('jesus.png');
+    background-size:cover;
+    background-position:center 22%;
+    filter:grayscale(15%) contrast(1.05);
+    z-index:-1;
+  }
+  .hero-content{
+    max-width:760px;
+  }
+  .hero .eyebrow{
+    color:var(--oro-claro);
+    margin-bottom:22px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    gap:14px;
+  }
+  .hero .eyebrow::before, .hero .eyebrow::after{
+    content:"";
+    width:36px;
+    height:1px;
+    background:var(--oro);
+    display:inline-block;
+  }
+  .hero h1{
+    font-family:'Cinzel', serif;
+    font-weight:700;
+    font-size:clamp(2.3rem, 6vw, 4.2rem);
+    color:var(--hueso);
+    text-shadow:0 4px 30px rgba(0,0,0,0.6);
+    letter-spacing:0.01em;
+    line-height:1.15;
+  }
+  .hero h1 span{
+    color:var(--oro-claro);
+  }
+  .hero .subline{
+    margin-top:24px;
+    font-family:'Barlow Condensed', sans-serif;
+    font-weight:500;
+    font-size:1.15rem;
+    letter-spacing:0.04em;
+    color:var(--hueso-tenue);
+  }
+
+  /* ---------- base verse ---------- */
+  .base-verse-wrap{
+    padding:70px 24px 80px;
+    display:flex;
+    justify-content:center;
+  }
+  .base-verse{
+    max-width:720px;
+    width:100%;
+    text-align:center;
+    padding:52px 40px 44px;
+    position:relative;
+    border-top:2px solid var(--oro);
+    border-bottom:2px solid var(--oro);
+  }
+  .base-verse::before, .base-verse::after{
+    content:"";
+    position:absolute;
+    left:50%;
+    transform:translateX(-50%);
+    width:6px;
+    height:6px;
+    background:var(--rojo);
+    transform:translateX(-50%) rotate(45deg);
+  }
+  .base-verse::before{ top:-4px; }
+  .base-verse::after{ bottom:-4px; }
+  .base-verse .eyebrow{ color:var(--rojo); margin-bottom:20px; }
+  .base-verse blockquote{
+    font-size:clamp(1.15rem, 2.4vw, 1.55rem);
+    font-style:italic;
+    font-weight:400;
+    color:var(--hueso);
+    max-width:620px;
+    margin:0 auto;
+  }
+  .base-verse.numbered{
+    max-width:780px;
+  }
+  .base-verse.numbered blockquote{
+    text-align:left;
+    font-style:normal;
+    font-size:1.05rem;
+    max-width:100%;
+  }
+  .base-verse.numbered blockquote p{ margin:0 0 14px; }
+  .base-verse.numbered blockquote p:last-child{ margin-bottom:0; }
+  .base-verse sup, .verse-card sup{
+    font-style:normal;
+    font-weight:700;
+    color:var(--rojo-oscuro);
+    background:rgba(211,33,49,0.14);
+    padding:1px 5px;
+    border-radius:3px;
+    margin-right:5px;
+    font-size:0.72rem;
+  }
+  .base-verse cite{
+    display:block;
+    margin-top:26px;
+    font-family:'Cinzel', serif;
+    font-style:normal;
+    font-weight:600;
+    letter-spacing:0.05em;
+    color:var(--oro-claro);
+    font-size:1rem;
+  }
+
+  /* ---------- sermon verses ---------- */
+  .verses{
+    padding:20px 24px 100px;
+    max-width:920px;
+    margin:0 auto;
+  }
+  .section-heading{
+    text-align:center;
+    margin-bottom:56px;
+  }
+  .section-heading .crest{ margin-bottom:16px; }
+  .section-heading h2{
+    font-family:'Cinzel', serif;
+    font-weight:600;
+    font-size:clamp(1.5rem, 3vw, 2.1rem);
+    color:var(--hueso);
+    letter-spacing:0.02em;
+  }
+  .section-heading .rule{
+    width:60px;
+    height:2px;
+    background:var(--rojo);
+    margin:18px auto 0;
+  }
+
+  .verse-list{
+    display:flex;
+    flex-direction:column;
+    gap:26px;
+  }
+
+  .verse-card{
+    background:var(--gris-medio);
+    border-left:4px solid var(--oro);
+    border-radius:2px;
+    padding:30px 34px;
+    box-shadow:0 14px 34px rgba(0,0,0,0.28);
+    transition:border-color 0.25s ease, transform 0.25s ease;
+  }
+  .verse-card:hover{
+    border-left-color:var(--rojo);
+    transform:translateX(4px);
+  }
+  .verse-card .ref{
+    font-family:'Barlow Condensed', sans-serif;
+    font-weight:700;
+    letter-spacing:0.1em;
+    text-transform:uppercase;
+    color:var(--oro-claro);
+    font-size:1rem;
+    margin-bottom:12px;
+    display:block;
+  }
+  .verse-card p{
+    color:var(--hueso);
+    font-size:1.05rem;
+    font-style:italic;
+  }
+  .verse-card p + p{ margin-top:14px; }
+
+  .verse-card.long p{ font-style:normal; }
+
+  /* ---------- alabanzas ---------- */
+  .praise{
+    padding:10px 24px 100px;
+    max-width:1100px;
+    margin:0 auto;
+  }
+  .praise-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit, minmax(260px, 1fr));
+    gap:28px;
+  }
+  .praise-card{
+    background:var(--gris-medio);
+    border-left:4px solid var(--oro);
+    border-radius:2px;
+    padding:18px 18px 20px;
+    box-shadow:0 14px 34px rgba(0,0,0,0.28);
+    transition:border-color 0.25s ease, transform 0.25s ease;
+  }
+  .praise-card:hover{
+    border-left-color:var(--rojo);
+    transform:translateY(-3px);
+  }
+  .video-frame{
+    position:relative;
+    width:100%;
+    padding-top:56.25%;
+    background:#000;
+    border-radius:2px;
+    overflow:hidden;
+    margin-bottom:14px;
+  }
+  .video-frame iframe{
+    position:absolute;
+    inset:0;
+    width:100%;
+    height:100%;
+    border:0;
+  }
+  .praise-card .song-title{
+    display:block;
+    font-family:'Cinzel', serif;
+    font-weight:600;
+    font-size:1rem;
+    color:var(--oro-claro);
+    margin-bottom:4px;
+  }
+  .praise-card .song-artist{
+    display:block;
+    font-family:'Barlow Condensed', sans-serif;
+    font-weight:500;
+    letter-spacing:0.03em;
+    font-size:0.9rem;
+    color:var(--hueso-tenue);
+  }
+
+  /* ---------- footer ---------- */
+  footer{
+    background:var(--gris-oscuro);
+    border-top:1px solid rgba(192,133,55,0.35);
+    text-align:center;
+    padding:36px 24px;
+    font-family:'Barlow Condensed', sans-serif;
+    letter-spacing:0.08em;
+    text-transform:uppercase;
+    font-size:0.85rem;
+    color:var(--hueso-tenue);
+  }
+  footer strong{ color:var(--oro-claro); }
+
+  @media (max-width:600px){
+    .hero{ min-height:64vh; padding:48px 18px; }
+    .base-verse{ padding:40px 22px 34px; }
+    .verse-card{ padding:24px 22px; }
+    .logo-badge{ padding:12px 22px 8px; }
+    .logo-badge img{ height:64px; }
+  }
+
+  :focus-visible{
+    outline:2px solid var(--oro-claro);
+    outline-offset:3px;
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="logo-badge">
+    <img src="logo_ministerio_conquistadores_f_blanco.jpg" alt="Conquistadores — Hombres en Acción">
+  </div>
+</header>
+
+<section class="hero">
+  <div class="hero-bg" role="img" aria-label="Imagen de Jesus"></div>
+  <div class="hero-content">
+    <p class="eyebrow">Conquistadores</p>
+    <h1>De hombre a<span> conquistador.</span></h1>
+    <p class="subline">Hombres en Acción</p>
+  </div>
+</section>
+
+<div class="base-verse-wrap">
+  <div class="base-verse numbered">
+    <p class="eyebrow" style="text-align:center;">Texto base</p>
+    <blockquote>
+      <p>«<sup>1</sup>Aconteció después de la muerte de Moisés siervo de Jehová, que Jehová habló a Josué hijo de Nun, ayudante de Moisés, diciendo: <sup>2</sup>Mi siervo Moisés ha muerto; ahora, pues, levántate y pasa este Jordán, tú y todo este pueblo, a la tierra que yo les doy a los hijos de Israel. <sup>3</sup>Yo os he entregado, como lo había dicho a Moisés, todo lugar que pisare la planta de vuestro pie. <sup>4</sup>Desde el desierto y el Líbano hasta el gran río Éufrates, toda la tierra de los heteos, hasta el gran mar donde se pone el sol, será vuestro territorio.</p>
+      <p><sup>5</sup>Nadie te podrá hacer frente en todos los días de tu vida; como estuve con Moisés, estaré contigo; no te dejaré, ni te desampararé. <sup>6</sup>Esfuérzate y sé valiente; porque tú repartirás a este pueblo por heredad la tierra de la cual juré a sus padres que la daría a ellos.</p>
+      <p><sup>7</sup>Solamente esfuérzate y sé muy valiente, para cuidar de hacer conforme a toda la ley que mi siervo Moisés te mandó; no te apartes de ella ni a diestra ni a siniestra, para que seas prosperado en todas las cosas que emprendas. <sup>8</sup>Nunca se apartará de tu boca este libro de la ley, sino que de día y de noche meditarás en él, para que guardes y hagas conforme a todo lo que en él está escrito; porque entonces harás prosperar tu camino, y todo te saldrá bien.</p>
+      <p><sup>9</sup>Mira que te mando que te esfuerces y seas valiente; no temas ni desmayes, porque Jehová tu Dios estará contigo en dondequiera que vayas».</p>
+    </blockquote>
+    <cite>Josué 1:1&ndash;9</cite>
+  </div>
+</div>
+
+<section class="verses">
+  <div class="section-heading">
+    <svg class="crest" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+      <path d="M20 2 L26 14 L34 10 L28 20 L34 30 L26 26 L20 38 L14 26 L6 30 L12 20 L6 10 L14 14 Z"/>
+    </svg>
+    <h2>Versículos de la predicación</h2>
+    <div class="rule"></div>
+  </div>
+
+  <div class="verse-list">
+
+    <div class="verse-card long">
+      <span class="ref">Santiago 2:14&ndash;17</span>
+      <p><sup>14</sup>Hermanos míos, ¿de qué aprovechará si alguno dice que tiene fe, y no tiene obras? ¿Podrá la fe salvarle? <sup>15</sup>Y si un hermano o una hermana están desnudos, y tienen necesidad del mantenimiento de cada día, <sup>16</sup>y alguno de vosotros les dice: Id en paz, calentaos y saciaos, pero no les dais las cosas que son necesarias para el cuerpo, ¿de qué aprovecha?</p>
+      <p><sup>17</sup>Así también la fe, si no tiene obras, es muerta en sí misma.</p>
+    </div>
+
+    <div class="verse-card">
+      <span class="ref">Apocalipsis 3:15</span>
+      <p>«Yo conozco tus obras, que ni eres frío ni caliente. ¡Ojalá fueses frío o caliente!».</p>
+    </div>
+
+  </div>
+</section>
+
+<section class="praise">
+  <div class="section-heading">
+    <svg class="crest" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+      <path d="M20 2 L26 14 L34 10 L28 20 L34 30 L26 26 L20 38 L14 26 L6 30 L12 20 L6 10 L14 14 Z"/>
+    </svg>
+    <h2>Alabanzas</h2>
+    <div class="rule"></div>
+  </div>
+
+  <div class="praise-grid">
+
+    <div class="praise-card">
+      <div class="video-frame">
+        <iframe src="https://www.youtube.com/embed/JskHuiSh1uA?si=ox82DvoqhDd-uWV" title="Nada Es Imposible - Planetshakers" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      </div>
+      <span class="song-title">Nada es Imposible</span>
+      <span class="song-artist">Planetshakers</span>
+    </div>
+
+    <div class="praise-card">
+      <div class="video-frame">
+        <iframe src="https://www.youtube.com/embed/naG_gVo8buc" title="Alaba - Evan Craft, Intimidad Worship" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      </div>
+      <span class="song-title">Alaba</span>
+      <span class="song-artist">Evan Craft, Intimidad Worship</span>
+    </div>
+
+    <div class="praise-card">
+      <div class="video-frame">
+        <iframe src="https://www.youtube.com/embed/m8j9koKpx8M" title="Creo En Ti - Julio Melgar" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      </div>
+      <span class="song-title">Creo En Ti</span>
+      <span class="song-artist">Julio Melgar</span>
+    </div>
+
+    <div class="praise-card">
+      <div class="video-frame">
+        <iframe src="https://www.youtube.com/embed/lNPzWVZd2Uc" title="Te Doy Gloria - En Espíritu Y En Verdad" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      </div>
+      <span class="song-title">Te Doy Gloria</span>
+      <span class="song-artist">En Espíritu Y En Verdad &middot; Luz Y Salvación</span>
+    </div>
+
+    <div class="praise-card">
+      <div class="video-frame">
+        <iframe src="https://www.youtube.com/embed/BPl_Koxwkr4" title="Surrounded / Rodeado - Free Worship, Marcos Witt" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      </div>
+      <span class="song-title">Surrounded / Rodeado</span>
+      <span class="song-artist">Free Worship, Marcos Witt &middot; Already Done</span>
+    </div>
+
+  </div>
+</section>
+
+<footer>
+  <strong>Conquistadores</strong> &middot; Hombres en Acción
+</footer>
+
+</body>
+</html>
