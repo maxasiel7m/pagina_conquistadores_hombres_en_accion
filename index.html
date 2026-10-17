@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>De hombre a conquistador | Conquistadores</title>
+<title>Apariencias | Conquistadores</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700;900&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,500;0,8..60,600;1,8..60,400;1,8..60,500&family=Barlow+Condensed:wght@500;600;700&display=swap" rel="stylesheet">
@@ -102,12 +102,12 @@
     position:absolute;
     inset:0;
     background-image:
-      linear-gradient(180deg, rgba(26,26,26,0.78) 0%, rgba(26,26,26,0.58) 40%, rgba(26,26,26,0.9) 100%),
-      linear-gradient(90deg, rgba(26,26,26,0.5), rgba(26,26,26,0.2)),
-      url('jesus.png');
+      linear-gradient(180deg, rgba(26,26,26,0.62) 0%, rgba(26,26,26,0.48) 45%, rgba(26,26,26,0.88) 100%),
+      linear-gradient(90deg, rgba(26,26,26,0.4), rgba(26,26,26,0.15)),
+      url('assets/apariencias.jpg');
     background-size:cover;
-    background-position:center 22%;
-    filter:grayscale(15%) contrast(1.05);
+    background-position:center 38%;
+    filter:saturate(0.92) contrast(1.05) sepia(0.12);
     z-index:-1;
   }
   .hero-content{
@@ -279,62 +279,6 @@
 
   .verse-card.long p{ font-style:normal; }
 
-  /* ---------- alabanzas ---------- */
-  .praise{
-    padding:10px 24px 100px;
-    max-width:1100px;
-    margin:0 auto;
-  }
-  .praise-grid{
-    display:grid;
-    grid-template-columns:repeat(auto-fit, minmax(260px, 1fr));
-    gap:28px;
-  }
-  .praise-card{
-    background:var(--gris-medio);
-    border-left:4px solid var(--oro);
-    border-radius:2px;
-    padding:18px 18px 20px;
-    box-shadow:0 14px 34px rgba(0,0,0,0.28);
-    transition:border-color 0.25s ease, transform 0.25s ease;
-  }
-  .praise-card:hover{
-    border-left-color:var(--rojo);
-    transform:translateY(-3px);
-  }
-  .video-frame{
-    position:relative;
-    width:100%;
-    padding-top:56.25%;
-    background:#000;
-    border-radius:2px;
-    overflow:hidden;
-    margin-bottom:14px;
-  }
-  .video-frame iframe{
-    position:absolute;
-    inset:0;
-    width:100%;
-    height:100%;
-    border:0;
-  }
-  .praise-card .song-title{
-    display:block;
-    font-family:'Cinzel', serif;
-    font-weight:600;
-    font-size:1rem;
-    color:var(--oro-claro);
-    margin-bottom:4px;
-  }
-  .praise-card .song-artist{
-    display:block;
-    font-family:'Barlow Condensed', sans-serif;
-    font-weight:500;
-    letter-spacing:0.03em;
-    font-size:0.9rem;
-    color:var(--hueso-tenue);
-  }
-
   /* ---------- footer ---------- */
   footer{
     background:var(--gris-oscuro);
@@ -351,6 +295,7 @@
 
   @media (max-width:600px){
     .hero{ min-height:64vh; padding:48px 18px; }
+    .hero-bg{ background-position:center 32%; }
     .base-verse{ padding:40px 22px 34px; }
     .verse-card{ padding:24px 22px; }
     .logo-badge{ padding:12px 22px 8px; }
@@ -367,15 +312,15 @@
 
 <header>
   <div class="logo-badge">
-    <img src="logo_ministerio_conquistadores_f_blanco.jpg" alt="Conquistadores — Hombres en Acción">
+    <img src="assets/logo.jpg" alt="Conquistadores — Hombres en Acción">
   </div>
 </header>
 
 <section class="hero">
-  <div class="hero-bg" role="img" aria-label="Imagen de Jesus"></div>
+  <div class="hero-bg" role="img" aria-label="Samuel unge a David arrodillado ante él, rodeado de sus hermanos — ilustración de 1 Samuel 16"></div>
   <div class="hero-content">
-    <p class="eyebrow">Conquistadores</p>
-    <h1>De hombre a<span> conquistador.</span></h1>
+    <p class="eyebrow">Serie Conquistadores</p>
+    <h1>Apariencias</h1>
     <p class="subline">Hombres en Acción</p>
   </div>
 </section>
@@ -384,12 +329,12 @@
   <div class="base-verse numbered">
     <p class="eyebrow" style="text-align:center;">Texto base</p>
     <blockquote>
-      <p>«<sup>1</sup>Aconteció después de la muerte de Moisés siervo de Jehová, que Jehová habló a Josué hijo de Nun, ayudante de Moisés, diciendo: <sup>2</sup>Mi siervo Moisés ha muerto; ahora, pues, levántate y pasa este Jordán, tú y todo este pueblo, a la tierra que yo les doy a los hijos de Israel. <sup>3</sup>Yo os he entregado, como lo había dicho a Moisés, todo lugar que pisare la planta de vuestro pie. <sup>4</sup>Desde el desierto y el Líbano hasta el gran río Éufrates, toda la tierra de los heteos, hasta el gran mar donde se pone el sol, será vuestro territorio.</p>
-      <p><sup>5</sup>Nadie te podrá hacer frente en todos los días de tu vida; como estuve con Moisés, estaré contigo; no te dejaré, ni te desampararé. <sup>6</sup>Esfuérzate y sé valiente; porque tú repartirás a este pueblo por heredad la tierra de la cual juré a sus padres que la daría a ellos.</p>
-      <p><sup>7</sup>Solamente esfuérzate y sé muy valiente, para cuidar de hacer conforme a toda la ley que mi siervo Moisés te mandó; no te apartes de ella ni a diestra ni a siniestra, para que seas prosperado en todas las cosas que emprendas. <sup>8</sup>Nunca se apartará de tu boca este libro de la ley, sino que de día y de noche meditarás en él, para que guardes y hagas conforme a todo lo que en él está escrito; porque entonces harás prosperar tu camino, y todo te saldrá bien.</p>
-      <p><sup>9</sup>Mira que te mando que te esfuerces y seas valiente; no temas ni desmayes, porque Jehová tu Dios estará contigo en dondequiera que vayas».</p>
+      <p><sup>6</sup>Cuando llegaron, Samuel se fijó en Eliab y pensó: «Sin duda que éste es el ungido del Señor». <sup>7</sup>Pero el Señor le dijo a Samuel: No te dejes impresionar por su apariencia ni por su estatura, pues yo lo he rechazado. La gente se fija en las apariencias, pero yo me fijo en el corazón.</p>
+      <p><sup>8</sup>Entonces Isaí llamó a Abinadab para presentárselo a Samuel, pero Samuel dijo: A éste no lo ha escogido el Señor. <sup>9</sup>Luego le presentó a Sama, y Samuel repitió: Tampoco a éste lo ha escogido. <sup>10</sup>Isaí le presentó a siete de sus hijos, pero Samuel le dijo: El Señor no ha escogido a ninguno de ellos.</p>
+      <p><sup>11</sup>¿Son éstos todos tus hijos? —preguntó Samuel. —Queda el más pequeño —respondió Isaí—, pero está cuidando el rebaño. —Manda a buscarlo —insistió Samuel—, que no podemos continuar hasta que él llegue.</p>
+      <p><sup>12</sup>Isaí mandó a buscarlo, y se lo trajeron. Era buen mozo, trigueño y de buena presencia. El Señor le dijo a Samuel: Éste es; levántate y úngelo».</p>
     </blockquote>
-    <cite>Josué 1:1&ndash;9</cite>
+    <cite>1&ordm; Samuel 16:6&ndash;12</cite>
   </div>
 </div>
 
@@ -405,68 +350,18 @@
   <div class="verse-list">
 
     <div class="verse-card long">
-      <span class="ref">Santiago 2:14&ndash;17</span>
-      <p><sup>14</sup>Hermanos míos, ¿de qué aprovechará si alguno dice que tiene fe, y no tiene obras? ¿Podrá la fe salvarle? <sup>15</sup>Y si un hermano o una hermana están desnudos, y tienen necesidad del mantenimiento de cada día, <sup>16</sup>y alguno de vosotros les dice: Id en paz, calentaos y saciaos, pero no les dais las cosas que son necesarias para el cuerpo, ¿de qué aprovecha?</p>
-      <p><sup>17</sup>Así también la fe, si no tiene obras, es muerta en sí misma.</p>
+      <span class="ref">Efesios 2:1&ndash;9</span>
+      <p><sup>1</sup>En otro tiempo ustedes estaban muertos en sus transgresiones y pecados, <sup>2</sup>en los cuales andaban conforme a los poderes de este mundo. Se conducían según el que gobierna las tinieblas, según el espíritu que ahora ejerce su poder en los que viven en la desobediencia. <sup>3</sup>En ese tiempo también todos nosotros vivíamos como ellos, impulsados por nuestros deseos pecaminosos, siguiendo nuestra propia voluntad y nuestros propósitos. Como los demás, éramos por naturaleza objeto de la ira de Dios.</p>
+      <p><sup>4</sup>Pero Dios, que es rico en misericordia, por su gran amor por nosotros, <sup>5</sup>nos dio vida con Cristo, aun cuando estábamos muertos en pecados. ¡Por gracia ustedes han sido salvados! <sup>6</sup>Y en unión con Cristo Jesús, Dios nos resucitó y nos hizo sentar con él en las regiones celestiales, <sup>7</sup>para mostrar en los tiempos venideros la incomparable riqueza de su gracia, que por su bondad derramó sobre nosotros en Cristo Jesús.</p>
+      <p><sup>8</sup>Porque por gracia ustedes han sido salvados mediante la fe; esto no procede de ustedes, sino que es el regalo de Dios, <sup>9</sup>no por obras, para que nadie se jacte.</p>
     </div>
 
-    <div class="verse-card">
-      <span class="ref">Apocalipsis 3:15</span>
-      <p>«Yo conozco tus obras, que ni eres frío ni caliente. ¡Ojalá fueses frío o caliente!».</p>
-    </div>
-
-  </div>
-</section>
-
-<section class="praise">
-  <div class="section-heading">
-    <svg class="crest" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-      <path d="M20 2 L26 14 L34 10 L28 20 L34 30 L26 26 L20 38 L14 26 L6 30 L12 20 L6 10 L14 14 Z"/>
-    </svg>
-    <h2>Alabanzas</h2>
-    <div class="rule"></div>
-  </div>
-
-  <div class="praise-grid">
-
-    <div class="praise-card">
-      <div class="video-frame">
-        <iframe src="https://www.youtube.com/embed/JskHuiSh1uA?si=ox82DvoqhDd-uWV" title="Nada Es Imposible - Planetshakers" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-      </div>
-      <span class="song-title">Nada es Imposible</span>
-      <span class="song-artist">Planetshakers</span>
-    </div>
-
-    <div class="praise-card">
-      <div class="video-frame">
-        <iframe src="https://www.youtube.com/embed/naG_gVo8buc" title="Alaba - Evan Craft, Intimidad Worship" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-      </div>
-      <span class="song-title">Alaba</span>
-      <span class="song-artist">Evan Craft, Intimidad Worship</span>
-    </div>
-
-    <div class="praise-card">
-      <div class="video-frame">
-        <iframe src="https://www.youtube.com/embed/m8j9koKpx8M" title="Creo En Ti - Julio Melgar" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-      </div>
-      <span class="song-title">Creo En Ti</span>
-      <span class="song-artist">Julio Melgar</span>
-    </div>
-
-    <div class="praise-card">
-      <div class="video-frame">
-        <iframe src="https://www.youtube.com/embed/lNPzWVZd2Uc" title="Te Doy Gloria - En Espíritu Y En Verdad" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-      </div>
-      <span class="song-title">Te Doy Gloria</span>
-      <span class="song-artist">En Espíritu Y En Verdad &middot; Luz Y Salvación</span>
-    </div>
-
-    <div class="praise-card">
-      <div class="video-frame">
-        <iframe src="https://www.youtube.com/embed/BPl_Koxwkr4" title="Surrounded / Rodeado - Free Worship, Marcos Witt" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-      </div>
-      <span class="song-title">Surrounded / Rodeado</span>
-      <span class="song-artist">Free Worship, Marcos Witt &middot; Already Done</span>
+    <div class="verse-card long">
+      <span class="ref">Ezequiel 37:1&ndash;10</span>
+      <p><sup>1</sup>La mano de Jehová vino sobre mí, y me llevó en el Espíritu de Jehová, y me puso en medio de un valle que estaba lleno de huesos. <sup>2</sup>Y me hizo pasar cerca de ellos por todo en derredor; y he aquí que eran muchísimos sobre la faz del campo, y por cierto secos en gran manera. <sup>3</sup>Y me dijo: Hijo de hombre, ¿vivirán estos huesos? Y dije: Señor Jehová, tú lo sabes. <sup>4</sup>Me dijo entonces: Profetiza sobre estos huesos, y diles: Huesos secos, oíd palabra de Jehová.</p>
+      <p><sup>5</sup>Así ha dicho Jehová el Señor a estos huesos: He aquí, yo hago entrar espíritu en vosotros, y viviréis. <sup>6</sup>Y pondré tendones sobre vosotros, y haré subir sobre vosotros carne, y os cubriré de piel, y pondré en vosotros espíritu, y viviréis; y sabréis que yo soy Jehová.</p>
+      <p><sup>7</sup>Profeticé, pues, como me fue mandado; y hubo un ruido mientras yo profetizaba, y he aquí un temblor; y los huesos se juntaron cada hueso con su hueso. <sup>8</sup>Y miré, y he aquí tendones sobre ellos, y la carne subió, y la piel cubrió por encima de ellos; pero no había en ellos espíritu.</p>
+      <p><sup>9</sup>Y me dijo: Profetiza al espíritu, profetiza, hijo de hombre, y di al espíritu: Así ha dicho Jehová el Señor: Espíritu, ven de los cuatro vientos, y sopla sobre estos muertos, y vivirán. <sup>10</sup>Y profeticé como me había mandado, y entró espíritu en ellos, y vivieron, y estuvieron sobre sus pies; un ejército grande en extremo.</p>
     </div>
 
   </div>
